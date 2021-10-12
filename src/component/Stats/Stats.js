@@ -5,7 +5,7 @@ import {StatsStatNameAbbreviation} from './util'
 import styles from './Stats.module.css'
 
 const Stats = ({ pokemon }) => {
-  console.log(pokemon.stats)
+  // console.log(pokemon.stats)
   return (
     <div className={styles.stats__container}>
       {

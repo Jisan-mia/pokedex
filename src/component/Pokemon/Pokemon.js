@@ -22,7 +22,7 @@ const Pokemon = () => {
   }, [currentUrl])
 
 
-  // console.log(pokemonList)
+  console.log(pokemonList)
 
   const fetchInitialPokemonData = async () => {
     try{

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../Image/Image'
+import InfoButton from '../InfoButton/InfoButton'
 import Stats from '../Stats/Stats'
 
 import styles from './PokemonItem.module.css'
@@ -19,6 +20,10 @@ const PokemonItem = ({ pokemon }) => {
       </div>
 
       <Stats pokemon={pokemon}/>
+
+      <div className={styles.show__info}>
+        <InfoButton />
+      </div>
 
     </div>
   )

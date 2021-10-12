@@ -36,3 +36,9 @@ img.item__img{
   padding: 0 0.2em 0.1em;
   line-height: 1em;
 }
+
+.show__info{
+  position: absolute;
+  right: 0.7em;
+  top: 0.7em;
+}
