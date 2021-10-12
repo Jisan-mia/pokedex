@@ -1,0 +1,27 @@
+.statItem__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.item{
+  width: 100%;
+}
+.label{
+  font-size: 1em;
+  font-variant: all-small-caps;
+  letter-spacing: -.05em;
+  border-top: 1px solid #e2e2e2;
+  color: #7d7d7d;
+}
+.value{
+  margin-bottom: 0.2em;
+}
+
+.unit{
+  opacity: 0.6;
+  margin-left: .06em;
+}

@@ -1,0 +1,8 @@
+.stats__container{
+  display: grid;
+  grid-template-columns: repeat(4, 3.3em);
+  grid-gap:0.8em 1em;
+  padding: 1em;
+  justify-content: space-evenly;
+  font-size: 0.9em;
+}

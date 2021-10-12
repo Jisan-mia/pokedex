@@ -6,7 +6,7 @@
   flex: 1;
   border-radius: 1em;
   box-shadow: 0 0 0px 1px #d0d0d0;
-  background: linear-gradient(135deg, #fbfbfb, #f1f1f1);
+  background: linear-gradient(49deg, #ffffff, #f1f1f1);
   scroll-snap-align: start;
   overflow: hidden;
   position: relative;

@@ -77,13 +77,13 @@ const Pokemon = () => {
           <>
             <Grid>
               {
-                pokemonList.length !== 0 &&  pokemonList.map(item => 
-                  <PokemonItem key={item.name} pokemon={item}/>
+                pokemonList.length !== 0 &&  pokemonList.map((item, idx) => 
+                  <PokemonItem key={idx} pokemon={item}/>
                 )
               }
             </Grid>
 
-            <div className='pagination-area'>
+            <div className={styles.pagination__area}>
               <Pagination
                 gotToPrevPage={links.prev ? gotToPrevPage : null}
                 gotToNextPage={links.next ? gotToNextPage : null}
