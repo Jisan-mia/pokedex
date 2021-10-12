@@ -78,7 +78,7 @@ const Pokemon = () => {
             <Grid>
               {
                 pokemonList.length !== 0 &&  pokemonList.map(item => 
-                  <PokemonItem pokemon={item}/>
+                  <PokemonItem key={item.name} pokemon={item}/>
                 )
               }
             </Grid>
@@ -96,10 +96,8 @@ const Pokemon = () => {
           <div className={styles.loading_container}>
             <PokeLoader />
           </div>
-        )
-        
+        ) 
       }
-      
 
     </div>
   )
