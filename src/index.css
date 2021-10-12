@@ -19,3 +19,9 @@ code {
 .content{
   margin-top: 95px;
 }
+
+@media (max-width: 600px) {
+  .content { 
+    margin-top: 80px;
+  }
+}

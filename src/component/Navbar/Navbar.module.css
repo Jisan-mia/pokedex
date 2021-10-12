@@ -22,11 +22,17 @@
   align-items: center;
   gap: 2em;
 }
-.brand{
+.brand, .navList__item{
   font-size: 1.08em;
   cursor: pointer;
 }
-.navList__item{
-  font-size: 1.08em;
-  cursor: pointer;
+
+@media (max-width: 600px) {
+  .brand, .navList__item{
+    font-size: 0.95em;
+  }
+  .nav__wrapper{
+    line-height: 60px;
+    padding: 0 1em;
+  }
 }

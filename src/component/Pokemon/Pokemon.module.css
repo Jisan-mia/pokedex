@@ -14,3 +14,6 @@
   margin-bottom: 30px;
   padding: 0 1em;
 }
+.pagination__area button {
+  margin-left: 1.3em;
+}
