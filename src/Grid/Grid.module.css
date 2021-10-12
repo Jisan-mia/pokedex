@@ -1,0 +1,17 @@
+.grid__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 1.2em;
+  padding: 1em;
+  flex: 1;
+  justify-content: center;
+}
+
+.grid__container::after{
+  content: "";
+  display: block;
+  grid-column-start: 1;
+  height: 1em;
+}

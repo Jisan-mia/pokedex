@@ -1,9 +1,9 @@
-import './App.css';
+import Pokemon from './component/Pokemon/Pokemon';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <Pokemon />
     </div>
   );
 }
