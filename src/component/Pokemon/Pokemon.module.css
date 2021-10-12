@@ -12,8 +12,14 @@
 .pagination__area{
   text-align: right;
   margin-bottom: 30px;
-  padding: 0 1em;
+  padding: 0 5.5em;
 }
 .pagination__area button {
   margin-left: 1.3em;
+}
+
+@media (max-width: 600px) {
+  .pagination__area{
+    padding: 0 1em;
+  }
 }
