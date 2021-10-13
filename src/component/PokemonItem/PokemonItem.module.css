@@ -42,3 +42,8 @@ img.item__img{
   right: 0.7em;
   top: 0.7em;
 }
+.heart{
+  position: absolute;
+  left: 0.7em;
+  top: 0.7em;
+}

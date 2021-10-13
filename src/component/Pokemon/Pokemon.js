@@ -2,9 +2,18 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Pagination from '../Pagination/Pagination';
 import styles from './Pokemon.module.css'
-import Grid from '../../Grid/Grid';
 import PokemonItem from '../PokemonItem/PokemonItem';
 import PokeLoader from '../PokeLoader/PokeLoader';
+import Grid from '../Grid/Grid';
+
+const getLocalFavorites = () => {
+  const favoriteIds = localStorage.getItem('favoriteIds');
+  if(favoriteIds) {
+    return JSON.parse(favoriteIds)
+  } else {
+    return []
+  }
+}
 
 
 const Pokemon = () => {
@@ -16,13 +25,15 @@ const Pokemon = () => {
   const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
 
   const [isLoading, setIsLoading] = useState(true);
+  
+  const [favoriteIds, setFavoriteIds] = useState(getLocalFavorites())
 
   useEffect(() => {
     fetchInitialPokemonData()
   }, [currentUrl])
 
 
-  console.log(pokemonList)
+  // console.log(pokemonList)
 
   const fetchInitialPokemonData = async () => {
     try{
@@ -78,7 +89,7 @@ const Pokemon = () => {
             <Grid>
               {
                 pokemonList.length !== 0 &&  pokemonList.map((item, idx) => 
-                  <PokemonItem key={idx} pokemon={item}/>
+                  <PokemonItem key={idx} pokemon={item} favoriteIds={favoriteIds} setFavoriteIds={setFavoriteIds}/>
                 )
               }
             </Grid>
