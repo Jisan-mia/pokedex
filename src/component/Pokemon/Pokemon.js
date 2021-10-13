@@ -6,7 +6,7 @@ import PokemonItem from '../PokemonItem/PokemonItem';
 import PokeLoader from '../PokeLoader/PokeLoader';
 import Grid from '../Grid/Grid';
 
-const getLocalFavorites = () => {
+export const getLocalFavorites = () => {
   const favoriteIds = localStorage.getItem('favoriteIds');
   if(favoriteIds) {
     return JSON.parse(favoriteIds)
@@ -24,7 +24,6 @@ const Pokemon = () => {
   })
   const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
 
-  const [isLoading, setIsLoading] = useState(true);
   
   const [favoriteIds, setFavoriteIds] = useState(getLocalFavorites())
 
@@ -39,7 +38,6 @@ const Pokemon = () => {
     try{
       const responseData = await axios.get(currentUrl)
       const pokeData = responseData.data
-      setIsLoading(false);
       setLinks({
         ...links, 
         next: pokeData.next,
