@@ -19,8 +19,8 @@ const PokemonItem = ({ pokemon, favoriteIds, setFavoriteIds }) => {
   const handleFavorite = () => {
     setIsFavorite(!isFavorite);
     let newFavoriteIds = [...favoriteIds];
-    if(favoriteIds.find(id => id == pokemon.id)) {
-      newFavoriteIds = favoriteIds.filter(id => id != pokemon.id)
+    if(favoriteIds.find(id => id === pokemon.id)) {
+      newFavoriteIds = favoriteIds.filter(id => id !== pokemon.id)
     } else {
       newFavoriteIds = [...favoriteIds, pokemon.id]
     }
