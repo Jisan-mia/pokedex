@@ -14,6 +14,7 @@ const Favorite = () => {
 
   const [favoriteIds, setFavoriteIds] = useState(getLocalFavorites())
   const [pokemonList, setPokemonList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     fetchFavoritePokemons(favoriteApiGenerator(favoriteIds))
@@ -21,6 +22,15 @@ const Favorite = () => {
 
   useEffect(() => {
     // 
+    const arr = []
+    const ids = []
+    pokemonList.forEach(poke => {
+      if(favoriteIds.includes(poke.id)) {
+        arr.push(poke)
+        setPokemonList([...arr])
+      }
+    })
+    
   }, [favoriteIds])
 
 

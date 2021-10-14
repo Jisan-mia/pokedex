@@ -45,7 +45,7 @@ const PokemonItem = ({ pokemon, favoriteIds, setFavoriteIds }) => {
       </div>
 
       <div className={styles.heart}>
-        <Heart isFavorite={isFavorite} setIsFavorite={handleFavorite} />
+        <Heart isFavorite={favoriteIds.includes(pokemon.id)} setIsFavorite={handleFavorite} />
       </div>
 
     </div>
